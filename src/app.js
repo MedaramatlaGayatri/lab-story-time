@@ -1,28 +1,66 @@
+
+function moreAboutHome(address, distanceFromTown, hasNeighbours){
+   var datatypes = typeof(address)+typeof(distanceFromTown)+typeof(hasNeighbours);
+   return datatypes;
+}
+
 //Progression 1:
 //We've got some basic info about Karen's home
 //Debug the type of data provided
 //Return the types concatenated in a single variable
-
+function moreAboutKaren(parents, noOfSiblings, isNuclearFamily){
+    if(typeof(parents) == 'string' && typeof(noOfSiblings) == 'number' && typeof(isNuclearFamily) == 'boolean'){
+        return true;
+    }else{
+        return false;
+    }
+}
 //Progression 2:
 //Check if the data given is of the right type
 //parents = String, noOfSiblings = Number, isNuclearFamily = Boolean
-
+function doesFriendExist(ageInText, ageInNumber){
+    var isNan = '';
+    if(isNaN(ageInText)){
+        isNan = ageInText;
+    }else if(isNaN(ageInNumber)){
+        isNan = ageInNumber;
+    }
+    return isNan;
+}
 //Progression 3:
 //Lily is suspicious about Karen's new friend
 //Karen tells her friend's age and even writes it down
 //Check which one those is not a number (NaN) and return that value
-
+function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel){
+    totalNoOfSweets -= sweetsConsumedByKaren;
+    totalNoOfSweets = totalNoOfSweets - sweetsConsumedInNMeters*metersToTravel;
+    return totalNoOfSweets/2;
+}
 //Progression 4:
 //Lily gave Karen x sweets
 //Karen ate y sweets herself
 //On her way to the river, she ate another z sweets every n meters travelled
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
-
+function convertToCelsius(fahrenheit){
+     return (fahrenheit-32)*5/9;
+}
 //Progression 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
-
+function aDifficultChoice(choice){
+    var decision = "";
+    if(choice == 1){
+        decision = 'Take her daughter to a doctor';
+    }else if(choice == 2){
+        decision = 'Talk to her husband about it';
+    }else if(choice == 3){
+        decision = 'Counsel her daughter herself';   
+    }else if(choice == 4){
+        decision = 'Lock her daughter in her room';
+    }
+    return decision;
+}
 //Progression 6:
 //Lily can now do multiple things to deal with this
 //1. Take her daughter to a doctor
@@ -30,7 +68,13 @@
 //3. Counsel her daughter herself
 //4. Lock her daughter in her room
 //Given a value, return which of these above actions Lily would take
-
+function consoleKaren(strategies){
+    var strategy = strategies[0];
+    for(let i = 1;i < strategies.length;i++){
+        strategy = strategy +" "+strategies[i];
+    } 
+    return strategy.length;
+}
 //Progression 7:
 //Lily realized that she'd hurt her daughter
 //All she wants now is for her to stop crying
